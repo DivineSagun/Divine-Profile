@@ -1,0 +1,388 @@
+:root {
+    --cream: #fff7ec;
+    --paper: #fffdf9;
+    --card: #ffffff;
+    --ink: #4a3b32;
+    --muted: #7a6353;
+    --coral: #ff7a6b;
+    --coral-ink: #c0392b;
+    --peach: #ffd7a8;
+    --mustard: #ffc94d;
+    --sage: #a3c98a;
+    --sky: #8fc9e8;
+    --lavender: #c3a6e6;
+    --blush: #ffb3c6;
+    --line: #f0dfcc;
+    --radius: 1.5rem;
+    --shadow: 0 0.5rem 0 rgba(74, 59, 50, 0.12);
+}
+
+html {
+    font-size: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Literata", "Iowan Old Style", Georgia, "Times New Roman", serif;
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: var(--ink);
+    background-color: var(--cream);
+    background-image: radial-gradient(rgba(255, 201, 77, 0.18) 0.12rem, transparent 0.12rem);
+    background-size: 1.5rem 1.5rem;
+    overflow-x: hidden;
+}
+
+.stage-glow {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+        radial-gradient(circle at 12% 8%, rgba(255, 179, 198, 0.45), transparent 40%),
+        radial-gradient(circle at 88% 12%, rgba(143, 201, 232, 0.4), transparent 42%),
+        radial-gradient(circle at 50% 105%, rgba(163, 201, 138, 0.4), transparent 45%);
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 1.5rem 3rem;
+    margin: 0 auto;
+    max-width: 62rem;
+}
+
+h1 {
+    font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(2.5rem, 9vw, 5rem);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    margin: 0;
+    color: var(--ink);
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 6rem;
+    height: 0.75rem;
+    margin: 0.75rem auto 0;
+    border-radius: 1rem;
+    background: linear-gradient(90deg, var(--coral), var(--mustard), var(--sage), var(--sky), var(--lavender));
+}
+
+.tagline {
+    font-family: "Caveat", "Segoe Script", cursive;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--muted);
+    margin: 1rem 0 1.75rem;
+}
+
+.badges {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0;
+    margin: 0;
+}
+
+.badges li {
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.5rem 1.1rem;
+    border-radius: 2rem;
+    border: 0.125rem solid var(--ink);
+    background-color: var(--card);
+    box-shadow: 0 0.25rem 0 rgba(74, 59, 50, 0.15);
+}
+
+.badges li:nth-child(1) {
+    background-color: var(--blush);
+}
+
+.badges li:nth-child(2) {
+    background-color: var(--mustard);
+}
+
+.badges li:nth-child(3) {
+    background-color: var(--sky);
+}
+
+main {
+    max-width: 62rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    padding: 2.5rem 0;
+}
+
+h2 {
+    font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin: 0 0 1.5rem;
+    display: inline-block;
+    padding: 0.35rem 1.1rem;
+    border-radius: 1rem;
+    border: 0.125rem solid var(--ink);
+    box-shadow: 0 0.3rem 0 rgba(74, 59, 50, 0.15);
+}
+
+.bio-section h2 {
+    background-color: var(--blush);
+}
+
+.dual h2 {
+    background-color: var(--mustard);
+}
+
+.loves h2 {
+    background-color: var(--sage);
+}
+
+.projects h2 {
+    background-color: var(--sky);
+}
+
+.contact h2 {
+    background-color: var(--lavender);
+}
+
+h3 {
+    font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.5rem;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+.muted {
+    color: var(--muted);
+    font-style: italic;
+}
+
+a {
+    color: var(--coral-ink);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 0.125rem dashed var(--coral-ink);
+}
+
+a:hover,
+a:focus {
+    color: #8f2a1e;
+    border-color: #8f2a1e;
+}
+
+.bio {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    background-color: var(--paper);
+    border: 0.125rem solid var(--line);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.bio-text {
+    flex: 1 1 22rem;
+    min-width: 0;
+}
+
+.bio-photo {
+    flex: 0 0 auto;
+    width: 14rem;
+    height: 17rem;
+    object-fit: cover;
+    border: 0.5rem solid var(--card);
+    border-radius: 1rem;
+    box-shadow: 0 0 0 0.125rem var(--line), var(--shadow);
+    transform: rotate(-2deg);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.card {
+    flex: 1 1 16rem;
+    background-color: var(--card);
+    border: 0.125rem solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    box-shadow: var(--shadow);
+}
+
+.card-tag {
+    display: inline-block;
+    font-family: "Caveat", "Segoe Script", cursive;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 0.15rem 0.75rem;
+    border-radius: 0.6rem;
+    border: 0.125rem solid var(--ink);
+    margin-bottom: 0.6rem;
+}
+
+.card-music {
+    background: linear-gradient(160deg, #ffe9e4, var(--card));
+    border-color: var(--coral);
+}
+
+.card-music .card-tag {
+    background-color: var(--coral);
+    color: var(--ink);
+}
+
+.card-print {
+    background: linear-gradient(160deg, #e2f1fb, var(--card));
+    border-color: var(--sky);
+}
+
+.card-print .card-tag {
+    background-color: var(--sky);
+    color: var(--ink);
+}
+
+.project {
+    background-color: var(--paper);
+    border: 0.125rem solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.gallery {
+    columns: 3 15rem;
+    column-gap: 1rem;
+    margin-top: 1rem;
+}
+
+.gallery figure {
+    break-inside: avoid;
+    margin: 0 0 1rem;
+    padding: 0.5rem;
+    background-color: var(--card);
+    border: 0.125rem solid var(--line);
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 0 rgba(74, 59, 50, 0.12);
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.65rem;
+}
+
+figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-align: center;
+}
+
+.tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    padding: 0;
+    margin: 0;
+}
+
+.tags li {
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.65rem 1.1rem;
+    border-radius: 1rem;
+    border: 0.125rem solid var(--ink);
+    box-shadow: 0 0.25rem 0 rgba(74, 59, 50, 0.15);
+}
+
+.tags li:nth-child(1) { background-color: var(--blush); }
+.tags li:nth-child(2) { background-color: var(--peach); }
+.tags li:nth-child(3) { background-color: var(--sage); }
+.tags li:nth-child(4) { background-color: var(--lavender); }
+
+.contact {
+    background-color: var(--paper);
+    border: 0.125rem solid var(--line);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow);
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--muted);
+    padding: 2rem 1.5rem 3rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 2.5rem 1.25rem 2rem;
+    }
+
+    main {
+        padding: 0 1.25rem;
+    }
+
+    .bio {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.75rem;
+        padding: 1.5rem;
+    }
+
+    .bio-photo {
+        width: 11rem;
+        height: 13rem;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        flex: 1 1 auto;
+    }
+
+    .gallery {
+        columns: 1;
+    }
+
+    .project {
+        padding: 1.25rem;
+    }
+
+    section {
+        padding: 1.75rem 0;
+    }
+}
